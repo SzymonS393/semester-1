@@ -3,14 +3,11 @@
 # You are going to write a very simple program:
 
 # Ask a user to enter two numbers (one per input)
-valid = False
-while valid == False:
-    try:
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
-        valid = True
-    except:
-        print("That is not a number")
+try:
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+except:
+    print("That is not a number")
 # multiply those numbers together
 total = num1 * num2
 # print out the result
