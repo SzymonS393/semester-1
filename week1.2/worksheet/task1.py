@@ -3,9 +3,9 @@ import sys
 try:
     grade = int(input("Enter a grade between 0 and 100: "))
 except:
-    sys.exit("Error: Grade must be an integer between 0 and 100")
-if grade < 0 or grade > 100:
     sys.exit("Invalid input")
+if grade < 0 or grade > 100:
+    sys.exit("Error: Grade must be an integer between 0 and 100")
 elif grade >= 0 and grade <= 39:
     result = "Fail"
 elif grade >= 40 and grade <= 69:
