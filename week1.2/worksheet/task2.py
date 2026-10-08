@@ -3,10 +3,10 @@ from util import read_numbers
 import sys
 
 import statistics
-try:
-    numbers = read_numbers()
-except:
+numbers = read_numbers()
+if numbers.len() == 0:
     sys.exit("Error: no numbers provided")
+
 print("Minimum =", str(min(numbers)))
 print("Maximum =", str(max(numbers)))
 print("Mean =", statistics.mean(numbers))
