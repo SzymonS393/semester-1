@@ -4,7 +4,7 @@ import sys
 
 import statistics
 numbers = read_numbers()
-if numbers.len() == 0:
+if len(numbers) == 0:
     sys.exit("Error: no numbers provided")
 
 print("Minimum =", str(min(numbers)))
