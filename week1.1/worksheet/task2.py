@@ -25,5 +25,6 @@ print("You will have saved", total, "by the end of the year")
 # print this out in the format £X.XX (to two decimal places).
 total += total * 0.008
 total = math.floor(total * 100)/100
-print("£" + str(total))
+
+print("£" + str(total) + "0")
 
