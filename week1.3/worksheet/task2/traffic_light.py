@@ -13,6 +13,24 @@ state = "red"
 
 print(f"Time {systime:03} State {state}")
 
+count = 0
+
 # Simulate the traffic light system up to time=maxtime in 1-second steps
+while systime < maxtime:
+    systime += 1
+    count += 1
+    maxcount = states[state]
+    if count == maxcount:
+        if state == "red":
+            state = "red_amber"
+        elif state == "red_amber":
+            state = "green"
+        elif state == "green":
+            state = "amber"
+        else:
+            state = "red"
+        count = 0
+    print(f"Time {systime:03} State {state}")
+    
 
 # At the end of each step you should output the time and state using the statement on line 14
