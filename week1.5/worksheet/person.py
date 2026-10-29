@@ -1,4 +1,4 @@
-# Worksheet 1.5: Person class
+  # Worksheet 1.5: Person class
 
 from datetime import date
 
@@ -9,6 +9,15 @@ class Person:
 
     # Write a constructor here to create and initialize name and
     # birth fields (see README.md for further details)
+    def __init__(self, name, birth):
+        if isinstance(name, str) == False or isinstance(birth, date) == False:
+            raise TypeError
+        elif name == "":
+            raise ValueError
+        self.name = name
+        self.birth = birth
 
     # Implement methods initials() and is_birthday() here
     # (see README.md for further details)
+    def initials():
+        
