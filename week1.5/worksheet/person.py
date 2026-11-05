@@ -1,6 +1,5 @@
   # Worksheet 1.5: Person class
 
-import datetime
 from datetime import date
 
 class Person:
@@ -23,11 +22,12 @@ class Person:
     # (see README.md for further details)
     def initials(self):
         '''returns the capital letters in the persons name '''
-        return ''.join([i for i in self.name if i.isupper()])
+        initial = ''.join([i for i in self.name if i.isupper()])
+        return initial
 
     def is_birthday(self):
         '''returns whether or not it is the persons birthday'''
-        if datetime.datetime.today() == self.birth:
+        if date.today() == self.birth:
             return True
         else:
             return False
