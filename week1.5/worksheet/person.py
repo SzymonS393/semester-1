@@ -22,12 +22,12 @@ class Person:
     # (see README.md for further details)
     def initials(self):
         '''returns the capital letters in the persons name '''
-        initial = ''.join([i for i in self.name if i.isupper()])
+        initial = ''.join(i[0].upper for i in self.name.split() if i)
         return initial
 
     def is_birthday(self):
         '''returns whether or not it is the persons birthday'''
-        if date.today() == self.birth:
+        if date.today().month == self.birth.month and date.today().day == self.birth.day:
             return True
         else:
             return False
