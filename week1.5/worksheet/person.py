@@ -22,7 +22,7 @@ class Person:
     # (see README.md for further details)
     def initials(self):
         '''returns the capital letters in the persons name '''
-        initial = ''.join(i[0].upper for i in self.name.split() if i)
+        initial = ''.join(word.capitalize() for word in self.name.split())
         return initial
 
     def is_birthday(self):
