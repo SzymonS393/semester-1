@@ -21,13 +21,13 @@ class Person:
 
     # Implement methods initials() and is_birthday() here
     # (see README.md for further details)
-    def initials(name):
+    def initials(self):
         '''returns the capital letters in the persons name '''
-        return ''.join([i for i in name if i.isupper()])
+        return ''.join([i for i in self.name if i.isupper()])
 
-    def is_birthday(birth):
+    def is_birthday(self):
         '''returns whether or not it is the persons birthday'''
-        if datetime.datetime.now() == birth:
+        if datetime.datetime.now() == self.birth:
             return True
         else:
             return False
