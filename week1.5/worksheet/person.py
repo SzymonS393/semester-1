@@ -27,7 +27,7 @@ class Person:
 
     def is_birthday(self):
         '''returns whether or not it is the persons birthday'''
-        if datetime.datetime.now() == self.birth:
+        if datetime.datetime.today() == self.birth:
             return True
         else:
             return False
